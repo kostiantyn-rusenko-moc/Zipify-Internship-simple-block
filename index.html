@@ -7,8 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <!-- <div class="img"></div> -->
-    <img src="./src/assets/file.png"/>
+    <main class="main">
+        <div class="main__img-box">
+            <img class="img-box__goods-img" src="./src/assets/goods1.png" alt="goodsName"/>
+        </div>
+        <div class="main__info">
+            <div class="info__description">
+                <h2 class="description__title">LIMITED SPACES AVAILABLE!</h2>
+                <div class="description__subtitle">Mother Nature is our own medicine cabinet. It is said by many that the pharmaceutical industry is not concerned with creating cures, but rather that they are concerned with creating customers. Luckily, more and more people are wising up to the fact that everything                 
+                </div>
+            </div>
+            <div class="info__field-input">
+                <input class="field-input__input" placeholder="Enter your email here" type="email" id="email" required/>
+                <div class="field-input__checkbox">
+                    <input class="checkbox" type="checkbox" id="notification" checked>
+                    <div class="checkbox__description">Yes, I would like to receive email updates about new
+                        products, special offers and more! I can unsubscribe
+                        at any time
+                    </div>
+                </div>
+            </div>
+            <div class="info__submit">
+                <button class="submit-btn">Submit</button>
+                <div class="submit__description">We hate SPAM and promise to keep your email safe</div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
