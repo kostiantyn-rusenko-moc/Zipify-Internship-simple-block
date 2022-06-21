@@ -13,18 +13,44 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                loader: 'image-webpack-loader',
+                enforce: 'pre'
+            },
+            {
+                test:/\.html$/,
+                use: [
+                  'html-loader'
+                ]
+              },
+            {
                 test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    "postcss-loader",
                 ],
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: "babel-loader",
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
             },
         ],
     },
     resolve: {
         extensions: [ '.js'],
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     devServer: {
         static: path.join(__dirname, ''),
         port: 3110,
@@ -37,7 +63,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: 'body',
-            template: path.join(__dirname, 'index.html'),
+            // template: path.join(__dirname, 'index.html'),
+            template: './index.html',
+            filename: 'index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],
