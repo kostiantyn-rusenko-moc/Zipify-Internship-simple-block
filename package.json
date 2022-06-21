@@ -1,0 +1,31 @@
+{
+  "name": "zipify-internship-simple-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack serve --progress --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostiantyn-rusenko-moc/Zipify-Internship-simple-block.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kostiantyn-rusenko-moc/Zipify-Internship-simple-block/issues"
+  },
+  "homepage": "https://github.com/kostiantyn-rusenko-moc/Zipify-Internship-simple-block#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "development": "^0.0.6",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
