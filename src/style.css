@@ -74,7 +74,8 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #808080;
-  box-sizing:border-box
+  box-sizing:border-box;
+  border: solid 1px #e6e6e6;
 }
 
 .field-input__checkbox {
