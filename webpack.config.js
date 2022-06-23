@@ -63,7 +63,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: 'body',
-            // template: path.join(__dirname, 'index.html'),
             template: './index.html',
             filename: 'index.html',
         }),
